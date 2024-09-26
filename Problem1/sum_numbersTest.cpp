@@ -17,16 +17,31 @@ int main() {
         "Output: Sum = 21",
         "(Explanation: 1 + 2 + 3 + 4 + 5 + 6 = 21 )"
     };
+    
+    string actualResult[3] = {
+        "Input: " + to_string(n),
+        "Output: Sum = " + to_string(sum),
+        "(Explanation: "
+    };
+
+    // Construct explanation
+    for (int i = 1; i <= n; i++) {
+        actualResult[2] += to_string(i);
+        if (i < n) {
+            actualResult[2] += " + ";
+        }
+    }
+    actualResult[2] += " = " + to_string(sum) + " )";
 
     // Print the actual output
     for(int i = 0; i < 3; i++) {
-        cout << expectedResult[i] << endl; // Change to expectedResult for correct printing
+        cout << actualResult[i] << endl; // Change to expectedResult for correct printing
     }
-
+    
     // Checking the test case with expected results
     bool testPassed = true;
     for (int i = 0; i < 3; i++) {
-        if (expectedResult[i] != expectedResult[i]) { // Use the actualResult for comparison
+        if (actualResult[i] != expectedResult[i]) { // Use the actualResult for comparison
             testPassed = false;
             break;
         }
