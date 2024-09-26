@@ -6,18 +6,18 @@ using namespace std;
 int main() {
 
 // TEST CASE
-int n = 9;
+int n = 120;
 vector<string> expectedResult = {
-    "9 x 1 = 9",
-    "9 x 2 = 18",
-    "9 x 3 = 27",
-    "9 x 4 = 36",
-    "9 x 5 = 45",
-    "9 x 6 = 54",
-    "9 x 7 = 63",
-    "9 x 8 = 72",
-    "9 x 9 = 81",
-    "9 x 10 = 90"
+    "120 x 1 = 120",
+    "120 x 2 = 240",
+    "120 x 3 = 360",
+    "120 x 4 = 480",
+    "120 x 5 = 600",
+    "120 x 6 = 720",
+    "120 x 7 = 840",
+    "120 x 8 = 960",
+    "120 x 9 = 1080",
+    "120 x 10 = 1200"
 };
 
 // Tp store the actual result 
