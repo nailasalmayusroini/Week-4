@@ -3,10 +3,9 @@
 using namespace std;
 
 int main() {
-    int n;
-    cout << "Enter a positive integer: ";
-    cin >> n;
 
+    // TEST CASE
+    int n = 6;
     int sum = 0;
 
     // Calculate the sum
@@ -15,29 +14,37 @@ int main() {
     }
 
     string expectedResult[3] = {
-        "Input: " + to_string(n),
-        "Output: Sum = " + to_string(sum),
-        "(Explanation: "
+        "Input: 6",
+        "Output: Sum = 21",
+        "(Explanation: 1 + 2 + 3 + 4 + 5 + 6 = 21)"
     };
 
-    // Construct explanation
+    //Calculate the actual results
+    string actualResult[3];
+    actualResult[0] = "Input: " + to_string(n); // Print the input, which is n
+    actualResult[1] = "Output: Sum = " + to_string(sum); // Print the output, which is the sum of the calculation
+
+
+    // Print the explanation of the sum with numbers
+    actualResult[2] = "(Explanation: ";
     for (int i = 1; i <= n; i++) {
-        expectedResult[2] += to_string(i);
+        actualResult[2] += to_string(i);
         if (i < n) {
-            expectedResult[2] += " + ";
+            actualResult[2] += " + "; // Add plus sign between the numbers
         }
     }
-    expectedResult[2] += " = " + to_string(sum) + " )";
+    actualResult[2] += " = " + to_string(sum) + " ) ";
 
-    // Print the actual output
-    for(int i = 0; i < 3; i++) {
-        cout << expectedResult[i] << endl; // Change to expectedResult for correct printing
+    // Print the actaul output
+    for(int i = 0; i<3;i++) {
+        cout << actualResult[i] << endl;
     }
     
-    // Checking the test case with expected results
+    
+    // Checking the test case with expectes result
     bool testPassed = true;
-    for (int i = 0; i < 3; i++) {
-        if (expectedResult[i] != expectedResult[i]) { // Use the actualResult for comparison
+    for (int i = 0; i<3; i++) {
+        if (actualResult[i] != expectedResult[i]) {
             testPassed = false;
             break;
         }
@@ -45,7 +52,9 @@ int main() {
 
     if (testPassed) {
         cout << "Test Passed" << endl;
-    } else {
+    }
+        
+    else {
         cout << "Test Failed" << endl;
     }
 
