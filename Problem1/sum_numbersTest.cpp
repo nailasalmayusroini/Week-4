@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-int main() {
+int main() { 
 
     // TEST CASE
     int n = 6;
